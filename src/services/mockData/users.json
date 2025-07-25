@@ -1,0 +1,16 @@
+[
+  {
+    "Id": 1,
+    "name": "Grammar Learner",
+    "email": "learner@example.com",
+    "currentLevel": "Intermediate",
+    "streak": 7,
+    "lastPractice": "2024-01-15T10:30:00Z",
+    "completedLessons": [1, 2, 3, 5, 8],
+    "totalMinutes": 245,
+    "averageAccuracy": 78,
+    "accuracyTrend": "up",
+    "accuracyChange": 5,
+    "joinedDate": "2024-01-01T00:00:00Z"
+  }
+]

@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'react-toastify/dist/ReactToastify.css';
+
+@layer base {
+  * {
+    @apply border-gray-200;
+  }
+  
+  body {
+    @apply font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  .toast-container {
+    @apply text-sm;
+  }
+  
+  .toast-container .Toastify__toast {
+    @apply rounded-lg shadow-lg border;
+  }
+  
+  .toast-container .Toastify__toast--success {
+    @apply bg-white border-success-200 text-gray-800;
+  }
+  
+  .toast-container .Toastify__toast--error {
+    @apply bg-white border-red-200 text-gray-800;
+  }
+  
+  .toast-container .Toastify__toast--warning {
+    @apply bg-white border-accent-200 text-gray-800;
+  }
+}
+
+@layer utilities {
+  .glassmorphism {
+    @apply bg-white/80 backdrop-blur-sm border border-white/20;
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent;
+  }
+  
+  .shadow-premium {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 0 0 1px rgba(255, 255, 255, 0.05);
+  }
+  
+  .button-glow {
+    @apply relative overflow-hidden;
+  }
+  
+  .button-glow::before {
+    content: '';
+    @apply absolute inset-0 rounded-lg opacity-0 transition-opacity duration-300;
+    background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.2) 50%, transparent 70%);
+    transform: translateX(-100%);
+    animation: shimmer 2s infinite;
+  }
+  
+  .button-glow:hover::before {
+    @apply opacity-100;
+  }
+  
+  @keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+}

@@ -1,0 +1,50 @@
+[
+  {
+    "Id": 1,
+    "title": "First Steps",
+    "description": "Complete your first lesson",
+    "icon": "🌟",
+    "unlocked": true,
+    "unlockedDate": "2024-01-02"
+  },
+  {
+    "Id": 2,
+    "title": "Week Warrior",
+    "description": "Maintain a 7-day streak",
+    "icon": "🔥",
+    "unlocked": true,
+    "unlockedDate": "2024-01-08"
+  },
+  {
+    "Id": 3,
+    "title": "Grammar Guru",
+    "description": "Achieve 90% accuracy on 10 quizzes",
+    "icon": "🎯",
+    "unlocked": false,
+    "unlockedDate": null
+  },
+  {
+    "Id": 4,
+    "title": "Tense Master",
+    "description": "Complete all tense lessons",
+    "icon": "⏰",
+    "unlocked": false,
+    "unlockedDate": null
+  },
+  {
+    "Id": 5,
+    "title": "Article Expert",
+    "description": "Perfect score on articles quiz",
+    "icon": "📚",
+    "unlocked": true,
+    "unlockedDate": "2024-01-10"
+  },
+  {
+    "Id": 6,
+    "title": "Consistent Learner",
+    "description": "Practice for 30 consecutive days",
+    "icon": "🏆",
+    "unlocked": false,
+    "unlockedDate": null
+  }
+]

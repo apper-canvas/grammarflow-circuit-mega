@@ -1,0 +1,68 @@
+[
+  {
+    "Id": 1,
+    "title": "Daily Grammar Challenge",
+    "description": "Mixed grammar questions adapted to your level",
+    "category": "mixed",
+    "difficulty": 2,
+    "questionCount": 10,
+    "estimatedTime": 8,
+    "isDaily": true,
+    "adaptiveDifficulty": 2
+  },
+  {
+    "Id": 2,
+    "title": "Present Tenses Mastery",
+    "description": "Test your knowledge of present simple and continuous",
+    "category": "tenses",
+    "difficulty": 1,
+    "questionCount": 8,
+    "estimatedTime": 6,
+    "isDaily": false,
+    "adaptiveDifficulty": 1
+  },
+  {
+    "Id": 3,
+    "title": "Articles Challenge",
+    "description": "Master the use of a, an, and the",
+    "category": "articles",
+    "difficulty": 1,
+    "questionCount": 6,
+    "estimatedTime": 4,
+    "isDaily": false,
+    "adaptiveDifficulty": 1
+  },
+  {
+    "Id": 4,
+    "title": "Prepositions Practice",
+    "description": "Common preposition mistakes and corrections",
+    "category": "prepositions",
+    "difficulty": 2,
+    "questionCount": 10,
+    "estimatedTime": 7,
+    "isDaily": false,
+    "adaptiveDifficulty": 2
+  },
+  {
+    "Id": 5,
+    "title": "Conditional Sentences",
+    "description": "First, second, and third conditional practice",
+    "category": "conditionals",
+    "difficulty": 3,
+    "questionCount": 12,
+    "estimatedTime": 10,
+    "isDaily": false,
+    "adaptiveDifficulty": 3
+  },
+  {
+    "Id": 6,
+    "title": "Advanced Grammar Mix",
+    "description": "Complex grammatical structures for advanced learners",
+    "category": "mixed",
+    "difficulty": 3,
+    "questionCount": 15,
+    "estimatedTime": 12,
+    "isDaily": false,
+    "adaptiveDifficulty": 3
+  }
+]

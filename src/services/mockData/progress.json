@@ -1,0 +1,50 @@
+[
+  {
+    "Id": 1,
+    "userId": 1,
+    "date": "2024-01-10",
+    "accuracy": 65,
+    "questionsAnswered": 8,
+    "category": "tenses"
+  },
+  {
+    "Id": 2,
+    "userId": 1,
+    "date": "2024-01-11",
+    "accuracy": 72,
+    "questionsAnswered": 10,
+    "category": "articles"
+  },
+  {
+    "Id": 3,
+    "userId": 1,
+    "date": "2024-01-12",
+    "accuracy": 78,
+    "questionsAnswered": 12,
+    "category": "prepositions"
+  },
+  {
+    "Id": 4,
+    "userId": 1,
+    "date": "2024-01-13",
+    "accuracy": 81,
+    "questionsAnswered": 9,
+    "category": "tenses"
+  },
+  {
+    "Id": 5,
+    "userId": 1,
+    "date": "2024-01-14",
+    "accuracy": 85,
+    "questionsAnswered": 11,
+    "category": "conditionals"
+  },
+  {
+    "Id": 6,
+    "userId": 1,
+    "date": "2024-01-15",
+    "accuracy": 88,
+    "questionsAnswered": 10,
+    "category": "mixed"
+  }
+]

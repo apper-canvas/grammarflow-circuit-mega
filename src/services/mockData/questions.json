@@ -1,0 +1,102 @@
+[
+  {
+    "Id": 1,
+    "text": "She _____ to the store every morning.",
+    "options": ["go", "goes", "going", "gone"],
+    "correctAnswer": 1,
+    "explanation": "Use 'goes' with third person singular in present simple tense.",
+    "category": "tenses",
+    "difficulty": 1,
+    "quizId": 2
+  },
+  {
+    "Id": 2,
+    "text": "I _____ working on this project right now.",
+    "options": ["am", "is", "are", "be"],
+    "correctAnswer": 0,
+    "explanation": "Use 'am' with 'I' in present continuous tense.",
+    "category": "tenses",
+    "difficulty": 1,
+    "quizId": 2
+  },
+  {
+    "Id": 3,
+    "text": "They _____ playing football at the moment.",
+    "options": ["is", "am", "are", "be"],
+    "correctAnswer": 2,
+    "explanation": "Use 'are' with 'they' in present continuous tense.",
+    "category": "tenses",
+    "difficulty": 1,
+    "quizId": 2
+  },
+  {
+    "Id": 4,
+    "text": "I need _____ pen to write this letter.",
+    "options": ["a", "an", "the", "no article"],
+    "correctAnswer": 0,
+    "explanation": "Use 'a' before consonant sounds like 'pen'.",
+    "category": "articles",
+    "difficulty": 1,
+    "quizId": 3
+  },
+  {
+    "Id": 5,
+    "text": "She is _____ honest person.",
+    "options": ["a", "an", "the", "no article"],
+    "correctAnswer": 1,
+    "explanation": "Use 'an' before vowel sounds like 'honest' (silent h).",
+    "category": "articles",
+    "difficulty": 1,
+    "quizId": 3
+  },
+  {
+    "Id": 6,
+    "text": "_____ sun rises in the east.",
+    "options": ["A", "An", "The", "No article"],
+    "correctAnswer": 2,
+    "explanation": "Use 'the' with unique objects like the sun.",
+    "category": "articles",
+    "difficulty": 1,
+    "quizId": 3
+  },
+  {
+    "Id": 7,
+    "text": "I will call you _____ the evening.",
+    "options": ["at", "in", "on", "by"],
+    "correctAnswer": 1,
+    "explanation": "Use 'in' with parts of the day (morning, afternoon, evening).",
+    "category": "prepositions",
+    "difficulty": 2,
+    "quizId": 4
+  },
+  {
+    "Id": 8,
+    "text": "The meeting is _____ Monday.",
+    "options": ["at", "in", "on", "by"],
+    "correctAnswer": 2,
+    "explanation": "Use 'on' with days of the week.",
+    "category": "prepositions",
+    "difficulty": 2,
+    "quizId": 4
+  },
+  {
+    "Id": 9,
+    "text": "If I _____ rich, I would travel the world.",
+    "options": ["am", "was", "were", "will be"],
+    "correctAnswer": 2,
+    "explanation": "Second conditional uses 'were' for all persons after 'if'.",
+    "category": "conditionals",
+    "difficulty": 3,
+    "quizId": 5
+  },
+  {
+    "Id": 10,
+    "text": "If it _____ tomorrow, we will cancel the picnic.",
+    "options": ["rain", "rains", "will rain", "rained"],
+    "correctAnswer": 1,
+    "explanation": "First conditional uses present simple in the if-clause.",
+    "category": "conditionals",
+    "difficulty": 2,
+    "quizId": 5
+  }
+]

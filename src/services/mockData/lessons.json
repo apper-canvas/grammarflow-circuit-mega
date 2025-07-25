@@ -1,0 +1,168 @@
+[
+  {
+    "Id": 1,
+    "title": "Present Simple Tense",
+    "description": "Learn the basics of present simple tense formation and usage",
+    "category": "tenses",
+    "difficulty": 1,
+    "estimatedTime": 15,
+    "content": {
+      "explanation": "The present simple tense is used to describe habits, facts, and general truths.",
+      "examples": [
+        "I work every day.",
+        "She likes coffee.",
+        "The sun rises in the east."
+      ],
+      "rules": [
+        "Use base form of verb for I, you, we, they",
+        "Add -s or -es for he, she, it",
+        "Use do/does for questions and negatives"
+      ]
+    },
+    "prerequisites": []
+  },
+  {
+    "Id": 2,
+    "title": "Articles: A, An, The",
+    "description": "Master the correct usage of definite and indefinite articles",
+    "category": "articles",
+    "difficulty": 1,
+    "estimatedTime": 12,
+    "content": {
+      "explanation": "Articles are words that define a noun as specific or unspecific.",
+      "examples": [
+        "A book (any book)",
+        "An apple (any apple)",
+        "The book (specific book)"
+      ],
+      "rules": [
+        "Use 'a' before consonant sounds",
+        "Use 'an' before vowel sounds",
+        "Use 'the' for specific nouns"
+      ]
+    },
+    "prerequisites": []
+  },
+  {
+    "Id": 3,
+    "title": "Past Simple vs Present Perfect",
+    "description": "Understand when to use past simple versus present perfect tense",
+    "category": "tenses",
+    "difficulty": 2,
+    "estimatedTime": 20,
+    "content": {
+      "explanation": "Past simple is for completed actions at specific times, present perfect connects past to present.",
+      "examples": [
+        "I visited Paris last year. (past simple)",
+        "I have visited Paris. (present perfect)"
+      ],
+      "rules": [
+        "Past simple: specific time in the past",
+        "Present perfect: experience or continuing relevance"
+      ]
+    },
+    "prerequisites": [1]
+  },
+  {
+    "Id": 4,
+    "title": "Prepositions of Time",
+    "description": "Learn when to use at, in, on for time expressions",
+    "category": "prepositions",
+    "difficulty": 1,
+    "estimatedTime": 10,
+    "content": {
+      "explanation": "Prepositions of time show when something happens.",
+      "examples": [
+        "At 5 o'clock",
+        "In January",
+        "On Monday"
+      ],
+      "rules": [
+        "At: specific times",
+        "In: months, years, seasons",
+        "On: days and dates"
+      ]
+    },
+    "prerequisites": []
+  },
+  {
+    "Id": 5,
+    "title": "Subject and Object Pronouns",
+    "description": "Distinguish between subject pronouns (I, you, he) and object pronouns (me, you, him)",
+    "category": "pronouns",
+    "difficulty": 1,
+    "estimatedTime": 8,
+    "content": {
+      "explanation": "Subject pronouns perform the action, object pronouns receive the action.",
+      "examples": [
+        "I see him. (I = subject, him = object)",
+        "She gave me a book. (she = subject, me = object)"
+      ],
+      "rules": [
+        "Subject pronouns: I, you, he, she, it, we, they",
+        "Object pronouns: me, you, him, her, it, us, them"
+      ]
+    },
+    "prerequisites": []
+  },
+  {
+    "Id": 6,
+    "title": "First Conditional",
+    "description": "Learn to express real possibilities with if-clauses",
+    "category": "conditionals",
+    "difficulty": 2,
+    "estimatedTime": 18,
+    "content": {
+      "explanation": "First conditional expresses real or likely future situations.",
+      "examples": [
+        "If it rains, I will stay home.",
+        "If you study hard, you will pass the exam."
+      ],
+      "rules": [
+        "If + present simple, will + base verb",
+        "Can use unless instead of if not"
+      ]
+    },
+    "prerequisites": [1]
+  },
+  {
+    "Id": 7,
+    "title": "Comparative and Superlative Adjectives",
+    "description": "Form and use comparative and superlative adjectives correctly",
+    "category": "adjectives",
+    "difficulty": 2,
+    "estimatedTime": 16,
+    "content": {
+      "explanation": "Comparative adjectives compare two things, superlatives compare three or more.",
+      "examples": [
+        "Tall → taller → tallest",
+        "Beautiful → more beautiful → most beautiful"
+      ],
+      "rules": [
+        "Short adjectives: add -er/-est",
+        "Long adjectives: use more/most"
+      ]
+    },
+    "prerequisites": []
+  },
+  {
+    "Id": 8,
+    "title": "Present Continuous Tense",
+    "description": "Express ongoing actions happening now",
+    "category": "tenses",
+    "difficulty": 1,
+    "estimatedTime": 14,
+    "content": {
+      "explanation": "Present continuous describes actions happening right now or temporary situations.",
+      "examples": [
+        "I am working now.",
+        "She is studying English this year."
+      ],
+      "rules": [
+        "am/is/are + verb + -ing",
+        "Use for actions happening now"
+      ]
+    },
+    "prerequisites": []
+  }
+]

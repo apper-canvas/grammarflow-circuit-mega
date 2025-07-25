@@ -1,0 +1,35 @@
+[
+  {
+    "Id": 1,
+    "userId": 1,
+    "rule": "Subject-Verb Agreement",
+    "description": "The verb must agree with the subject in number",
+    "example": "She go → She goes",
+    "category": "verbs",
+    "mistakeCount": 3,
+    "lastSeen": "2024-01-14",
+    "date": "Jan 14"
+  },
+  {
+    "Id": 2,
+    "userId": 1,
+    "rule": "Article Usage",
+    "description": "Incorrect use of a/an before vowel sounds",
+    "example": "A elephant → An elephant",
+    "category": "articles",
+    "mistakeCount": 2,
+    "lastSeen": "2024-01-13",
+    "date": "Jan 13"
+  },
+  {
+    "Id": 3,
+    "userId": 1,
+    "rule": "Preposition of Time",
+    "description": "Confusing 'at', 'in', and 'on' for time",
+    "example": "At Monday → On Monday",
+    "category": "prepositions",
+    "mistakeCount": 4,
+    "lastSeen": "2024-01-12",
+    "date": "Jan 12"
+  }
+]
