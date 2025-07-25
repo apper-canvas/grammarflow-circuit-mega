@@ -7,12 +7,16 @@ import { AnimatePresence } from "framer-motion";
 const Layout = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
-  // Mock user data - in a real app this would come from context/state
+// Mock user data - in a real app this would come from context/state
   const mockUser = {
     name: "Grammar Learner",
+    email: "learner@example.com",
     level: "Intermediate",
     streak: 7,
-    lastPractice: new Date().toISOString()
+    lastPractice: new Date().toISOString(),
+    completedLessons: [1, 2, 3, 5, 8],
+    totalMinutes: 245,
+    averageAccuracy: 78
   };
 
   const handleMenuClick = () => {

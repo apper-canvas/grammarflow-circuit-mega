@@ -8,11 +8,12 @@ import { motion } from "framer-motion";
 const Sidebar = ({ isOpen, onClose }) => {
   const location = useLocation();
 
-  const navigationItems = [
+const navigationItems = [
     { to: "/", icon: "Home", label: "Dashboard" },
     { to: "/learn", icon: "BookOpen", label: "Learn" },
     { to: "/practice", icon: "Brain", label: "Practice" },
     { to: "/progress", icon: "TrendingUp", label: "Progress" },
+    { to: "/profile", icon: "User", label: "Profile" },
   ];
 
   const sidebarContent = (

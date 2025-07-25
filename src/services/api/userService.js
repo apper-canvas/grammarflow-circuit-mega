@@ -28,9 +28,54 @@ class UserService {
 
   async saveQuizResults(results) {
     await this.delay(400);
-    // In a real app, this would save to database
+// In a real app, this would save to database
     console.log("Quiz results saved:", results);
     return { success: true };
+  }
+
+  async getProfile() {
+    await this.delay(300);
+    const user = this.users.find(u => u.Id === 1);
+    if (!user) throw new Error("User not found");
+    
+    return {
+      ...user,
+      preferences: {
+        notifications: true,
+        dailyReminders: true,
+        soundEffects: true,
+        difficulty: user.currentLevel?.toLowerCase() || 'intermediate'
+      }
+    };
+  }
+
+  async updateProfile(profileData) {
+    await this.delay(400);
+    const userIndex = this.users.findIndex(u => u.Id === 1);
+    
+    if (userIndex === -1) throw new Error("User not found");
+    
+    // Update user data
+    this.users[userIndex] = {
+      ...this.users[userIndex],
+      name: profileData.name || this.users[userIndex].name,
+      email: profileData.email || this.users[userIndex].email,
+      currentLevel: profileData.currentLevel || this.users[userIndex].currentLevel
+    };
+    
+    return { success: true, user: this.users[userIndex] };
+  }
+
+  async updatePreferences(preferences) {
+    await this.delay(300);
+    const user = this.users.find(u => u.Id === 1);
+    
+    if (!user) throw new Error("User not found");
+    
+    // In a real app, preferences would be stored separately
+    user.preferences = { ...user.preferences, ...preferences };
+    
+    return { success: true, preferences: user.preferences };
   }
 
   async updateStreak() {
@@ -49,7 +94,7 @@ class UserService {
   }
 
   delay(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
+return new Promise(resolve => setTimeout(resolve, ms));
   }
 }
 
