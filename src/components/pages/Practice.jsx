@@ -15,14 +15,15 @@ import { toast } from "react-toastify";
 
 const Practice = () => {
   const navigate = useNavigate();
-  const [quizzes, setQuizzes] = useState([]);
+const [quizzes, setQuizzes] = useState([]);
   const [currentQuiz, setCurrentQuiz] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [quizStarted, setQuizStarted] = useState(false);
   const [results, setResults] = useState(null);
-
-  useEffect(() => {
+  const [selectedTopic, setSelectedTopic] = useState("all");
+  const [availableTopics, setAvailableTopics] = useState([]);
+useEffect(() => {
     loadQuizzes();
   }, []);
 
@@ -32,11 +33,33 @@ const Practice = () => {
       setError("");
       const availableQuizzes = await quizService.getAdaptiveQuizzes();
       setQuizzes(availableQuizzes);
+      
+      // Extract unique topics from quizzes
+      const topics = [...new Set(availableQuizzes.map(quiz => quiz.category))];
+      setAvailableTopics(topics);
     } catch (err) {
       setError("Failed to load practice quizzes");
     } finally {
       setLoading(false);
     }
+  };
+
+  const getFilteredQuizzes = () => {
+    if (selectedTopic === "all") {
+      return quizzes.filter(quiz => !quiz.isDaily);
+    }
+    return quizzes.filter(quiz => !quiz.isDaily && quiz.category === selectedTopic);
+  };
+
+  const getTopicDisplayName = (topic) => {
+    const topicNames = {
+      tenses: "Tenses",
+      articles: "Articles", 
+      prepositions: "Prepositions",
+      conditionals: "Conditionals",
+      mixed: "Mixed Grammar"
+    };
+    return topicNames[topic] || topic.charAt(0).toUpperCase() + topic.slice(1);
   };
 
   const handleStartQuiz = async (quiz) => {
@@ -234,13 +257,48 @@ const Practice = () => {
 
       {/* Available Quizzes */}
       <div>
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">
-          Available Practice Quizzes
-        </h2>
+<div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4 sm:mb-0">
+            Choose Your Topic
+          </h2>
+        </div>
 
-        {quizzes.length > 0 ? (
+        {/* Topic Selection */}
+        <div className="mb-8">
+          <div className="flex flex-wrap gap-3">
+            <button
+              onClick={() => setSelectedTopic("all")}
+              className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
+                selectedTopic === "all"
+                  ? "bg-primary-600 text-white shadow-md"
+                  : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+              }`}
+            >
+              All Topics
+            </button>
+            {availableTopics.map((topic) => (
+              <button
+                key={topic}
+                onClick={() => setSelectedTopic(topic)}
+                className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
+                  selectedTopic === topic
+                    ? "bg-primary-600 text-white shadow-md"
+                    : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+                }`}
+              >
+                {getTopicDisplayName(topic)}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <h3 className="text-xl font-semibold text-gray-900 mb-6">
+          {selectedTopic === "all" ? "All Practice Quizzes" : `${getTopicDisplayName(selectedTopic)} Quizzes`}
+        </h3>
+
+        {getFilteredQuizzes().length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {quizzes.filter(quiz => !quiz.isDaily).map((quiz, index) => (
+            {getFilteredQuizzes().map((quiz, index) => (
               <motion.div
                 key={quiz.Id}
                 initial={{ opacity: 0, y: 20 }}
