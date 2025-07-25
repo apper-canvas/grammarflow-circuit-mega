@@ -27,12 +27,22 @@ class LessonService {
       .sort((a, b) => a.difficulty - b.difficulty)
       .slice(0, limit)
       .map(lesson => ({ ...lesson }));
-  }
+}
 
   async getByCategory(category) {
     await this.delay(300);
     return this.lessons
       .filter(lesson => lesson.category === category)
+      .map(lesson => ({ ...lesson }));
+  }
+
+  async getByDateRange(startDate, endDate) {
+    await this.delay(300);
+    const start = startDate.toISOString().split('T')[0];
+    const end = endDate.toISOString().split('T')[0];
+    
+    return this.lessons
+      .filter(lesson => lesson.scheduledDate && lesson.scheduledDate >= start && lesson.scheduledDate <= end)
       .map(lesson => ({ ...lesson }));
   }
 

@@ -6,6 +6,7 @@
     "category": "tenses",
     "difficulty": 1,
     "estimatedTime": 15,
+    "scheduledDate": "2024-12-15",
     "content": {
       "explanation": "The present simple tense is used to describe habits, facts, and general truths.",
       "examples": [
@@ -28,6 +29,7 @@
     "category": "articles",
     "difficulty": 1,
     "estimatedTime": 12,
+    "scheduledDate": "2024-12-16",
     "content": {
       "explanation": "Articles are words that define a noun as specific or unspecific.",
       "examples": [
@@ -50,6 +52,7 @@
     "category": "tenses",
     "difficulty": 2,
     "estimatedTime": 20,
+    "scheduledDate": "2024-12-18",
     "content": {
       "explanation": "Past simple is for completed actions at specific times, present perfect connects past to present.",
       "examples": [
@@ -70,6 +73,7 @@
     "category": "prepositions",
     "difficulty": 1,
     "estimatedTime": 10,
+    "scheduledDate": "2024-12-19",
     "content": {
       "explanation": "Prepositions of time show when something happens.",
       "examples": [
@@ -92,6 +96,7 @@
     "category": "pronouns",
     "difficulty": 1,
     "estimatedTime": 8,
+    "scheduledDate": "2024-12-20",
     "content": {
       "explanation": "Subject pronouns perform the action, object pronouns receive the action.",
       "examples": [
@@ -112,6 +117,7 @@
     "category": "conditionals",
     "difficulty": 2,
     "estimatedTime": 18,
+    "scheduledDate": "2024-12-22",
     "content": {
       "explanation": "First conditional expresses real or likely future situations.",
       "examples": [
@@ -132,6 +138,7 @@
     "category": "adjectives",
     "difficulty": 2,
     "estimatedTime": 16,
+    "scheduledDate": "2024-12-23",
     "content": {
       "explanation": "Comparative adjectives compare two things, superlatives compare three or more.",
       "examples": [
@@ -144,7 +151,7 @@
       ]
     },
     "prerequisites": []
-},
+  },
   {
     "Id": 8,
     "title": "Present Continuous Tense",
@@ -152,6 +159,7 @@
     "category": "tenses",
     "difficulty": 1,
     "estimatedTime": 14,
+    "scheduledDate": "2024-12-25",
     "content": {
       "explanation": "Present continuous describes actions happening right now or temporary situations.",
       "examples": [
@@ -172,6 +180,7 @@
     "category": "parts-of-speech",
     "difficulty": 1,
     "estimatedTime": 15,
+    "scheduledDate": "2024-12-26",
     "content": {
       "explanation": "Nouns are words that name people, places, things, or ideas. They can be concrete or abstract.",
       "examples": [
@@ -194,6 +203,7 @@
     "category": "parts-of-speech",
     "difficulty": 1,
     "estimatedTime": 12,
+    "scheduledDate": "2024-12-27",
     "content": {
       "explanation": "Verbs express actions, states of being, or help other verbs complete their meaning.",
       "examples": [
@@ -216,6 +226,7 @@
     "category": "parts-of-speech",
     "difficulty": 2,
     "estimatedTime": 14,
+    "scheduledDate": "2024-12-29",
     "content": {
       "explanation": "Adverbs modify verbs, adjectives, or other adverbs, often ending in -ly.",
       "examples": [
@@ -238,6 +249,7 @@
     "category": "parts-of-speech",
     "difficulty": 1,
     "estimatedTime": 8,
+    "scheduledDate": "2024-12-30",
     "content": {
       "explanation": "Interjections are words or phrases that express strong emotion or sudden feeling.",
       "examples": [
@@ -260,6 +272,7 @@
     "category": "parts-of-speech",
     "difficulty": 2,
     "estimatedTime": 16,
+    "scheduledDate": "2025-01-02",
     "content": {
       "explanation": "Conjunctions connect words, phrases, or clauses in sentences.",
       "examples": [
@@ -282,6 +295,7 @@
     "category": "figures-of-speech",
     "difficulty": 2,
     "estimatedTime": 18,
+    "scheduledDate": "2025-01-03",
     "content": {
       "explanation": "Metaphors compare two unlike things without using 'like' or 'as', creating vivid imagery.",
       "examples": [
@@ -304,6 +318,7 @@
     "category": "figures-of-speech",
     "difficulty": 1,
     "estimatedTime": 12,
+    "scheduledDate": "2025-01-05",
     "content": {
       "explanation": "Similes compare two different things using 'like' or 'as' to create vivid descriptions.",
       "examples": [
@@ -326,6 +341,7 @@
     "category": "figures-of-speech",
     "difficulty": 2,
     "estimatedTime": 14,
+    "scheduledDate": "2025-01-06",
     "content": {
       "explanation": "Personification gives human characteristics to non-human things.",
       "examples": [
@@ -348,6 +364,7 @@
     "category": "figures-of-speech",
     "difficulty": 2,
     "estimatedTime": 10,
+    "scheduledDate": "2025-01-08",
     "content": {
       "explanation": "Hyperbole uses deliberate and obvious exaggeration for emphasis or effect.",
       "examples": [
@@ -370,6 +387,7 @@
     "category": "figures-of-speech",
     "difficulty": 1,
     "estimatedTime": 10,
+    "scheduledDate": "2025-01-09",
     "content": {
       "explanation": "Alliteration repeats the same consonant sound at the beginning of nearby words.",
       "examples": [
@@ -392,6 +410,7 @@
     "category": "figures-of-speech",
     "difficulty": 1,
     "estimatedTime": 8,
+    "scheduledDate": "2025-01-10",
     "content": {
       "explanation": "Onomatopoeia uses words that phonetically imitate the sound they describe.",
       "examples": [
@@ -414,6 +433,7 @@
     "category": "figures-of-speech",
     "difficulty": 3,
     "estimatedTime": 20,
+    "scheduledDate": "2025-01-12",
     "content": {
       "explanation": "Irony involves contrast between expectation and reality, or between literal and intended meaning.",
       "examples": [
@@ -436,6 +456,7 @@
     "category": "figures-of-speech",
     "difficulty": 2,
     "estimatedTime": 12,
+    "scheduledDate": "2025-01-13",
     "content": {
       "explanation": "Oxymoron combines contradictory or opposing terms to create a paradoxical effect.",
       "examples": [

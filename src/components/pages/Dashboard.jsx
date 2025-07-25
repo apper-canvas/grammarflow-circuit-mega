@@ -16,9 +16,11 @@ import { toast } from "react-toastify";
 
 const Dashboard = () => {
   const navigate = useNavigate();
-  const [userData, setUserData] = useState(null);
+const [userData, setUserData] = useState(null);
   const [recommendedLessons, setRecommendedLessons] = useState([]);
   const [recentMistakes, setRecentMistakes] = useState([]);
+  const [calendarLessons, setCalendarLessons] = useState([]);
+  const [selectedDate, setSelectedDate] = useState(new Date());
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
@@ -31,15 +33,21 @@ const Dashboard = () => {
       setLoading(true);
       setError("");
       
-      const [user, lessons, mistakes] = await Promise.all([
+const startDate = new Date();
+      const endDate = new Date();
+      endDate.setDate(endDate.getDate() + 30);
+
+      const [user, lessons, mistakes, calendarData] = await Promise.all([
         userService.getCurrentUser(),
         lessonService.getRecommended(3),
-        userService.getRecentMistakes(5)
+        userService.getRecentMistakes(5),
+        lessonService.getByDateRange(startDate, endDate)
       ]);
 
       setUserData(user);
       setRecommendedLessons(lessons);
       setRecentMistakes(mistakes);
+      setCalendarLessons(calendarData);
     } catch (err) {
       setError("Failed to load dashboard data");
     } finally {
@@ -128,8 +136,7 @@ const Dashboard = () => {
           </div>
         </div>
       </motion.div>
-
-      {/* Stats Grid */}
+{/* Stats Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {stats.map((stat, index) => (
           <motion.div
@@ -142,6 +149,156 @@ const Dashboard = () => {
           </motion.div>
         ))}
       </div>
+
+      {/* Curriculum Calendar */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.4 }}
+      >
+        <Card className="p-6">
+          <div className="flex items-center justify-between mb-6">
+            <h2 className="text-2xl font-bold text-gray-900">
+              Curriculum Calendar
+            </h2>
+            <div className="flex items-center space-x-2">
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => {
+                  const newDate = new Date(selectedDate);
+                  newDate.setMonth(newDate.getMonth() - 1);
+                  setSelectedDate(newDate);
+                }}
+              >
+                <ApperIcon name="ChevronLeft" size={16} />
+              </Button>
+              <span className="text-lg font-semibold px-4">
+                {selectedDate.toLocaleDateString('en-US', { 
+                  month: 'long', 
+                  year: 'numeric' 
+                })}
+              </span>
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => {
+                  const newDate = new Date(selectedDate);
+                  newDate.setMonth(newDate.getMonth() + 1);
+                  setSelectedDate(newDate);
+                }}
+              >
+                <ApperIcon name="ChevronRight" size={16} />
+              </Button>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-7 gap-2">
+            {/* Calendar Header */}
+            {['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].map(day => (
+              <div key={day} className="p-2 text-center text-sm font-medium text-gray-500">
+                {day}
+              </div>
+            ))}
+
+            {/* Calendar Days */}
+            {(() => {
+              const firstDay = new Date(selectedDate.getFullYear(), selectedDate.getMonth(), 1);
+              const lastDay = new Date(selectedDate.getFullYear(), selectedDate.getMonth() + 1, 0);
+              const startDate = new Date(firstDay);
+              startDate.setDate(startDate.getDate() - firstDay.getDay());
+              
+              const days = [];
+              const current = new Date(startDate);
+              
+              for (let i = 0; i < 42; i++) {
+                const isCurrentMonth = current.getMonth() === selectedDate.getMonth();
+                const isToday = current.toDateString() === new Date().toDateString();
+                const dateStr = current.toISOString().split('T')[0];
+                const dayLessons = calendarLessons.filter(lesson => 
+                  lesson.scheduledDate === dateStr
+                );
+
+                days.push(
+                  <div
+                    key={current.toISOString()}
+                    className={`min-h-[80px] p-2 border border-gray-100 rounded-lg ${
+                      isCurrentMonth ? 'bg-white' : 'bg-gray-50'
+                    } ${isToday ? 'ring-2 ring-primary-500' : ''} hover:bg-gray-50 transition-colors cursor-pointer`}
+                    onClick={() => {
+                      if (dayLessons.length > 0) {
+                        toast.info(`${dayLessons.length} lesson${dayLessons.length > 1 ? 's' : ''} scheduled for ${current.toLocaleDateString()}`);
+                      }
+                    }}
+                  >
+                    <div className={`text-sm font-medium mb-1 ${
+                      isCurrentMonth ? 'text-gray-900' : 'text-gray-400'
+                    } ${isToday ? 'text-primary-600' : ''}`}>
+                      {current.getDate()}
+                    </div>
+                    <div className="space-y-1">
+                      {dayLessons.slice(0, 2).map(lesson => (
+                        <div
+                          key={lesson.Id}
+                          className={`text-xs px-2 py-1 rounded text-white truncate ${
+                            lesson.category === 'tenses' ? 'bg-primary-500' :
+                            lesson.category === 'articles' ? 'bg-secondary-500' :
+                            lesson.category === 'prepositions' ? 'bg-accent-500' :
+                            lesson.category === 'pronouns' ? 'bg-success-500' :
+                            lesson.category === 'conditionals' ? 'bg-purple-500' :
+                            lesson.category === 'adjectives' ? 'bg-pink-500' :
+                            lesson.category === 'parts-of-speech' ? 'bg-blue-500' :
+                            lesson.category === 'figures-of-speech' ? 'bg-indigo-500' :
+                            'bg-gray-500'
+                          }`}
+                          title={lesson.title}
+                        >
+                          {lesson.title}
+                        </div>
+                      ))}
+                      {dayLessons.length > 2 && (
+                        <div className="text-xs text-gray-500 px-2">
+                          +{dayLessons.length - 2} more
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                );
+                current.setDate(current.getDate() + 1);
+              }
+              
+              return days;
+            })()}
+          </div>
+
+          <div className="mt-4 flex flex-wrap gap-2">
+            <div className="flex items-center text-xs">
+              <div className="w-3 h-3 bg-primary-500 rounded mr-2"></div>
+              <span>Tenses</span>
+            </div>
+            <div className="flex items-center text-xs">
+              <div className="w-3 h-3 bg-secondary-500 rounded mr-2"></div>
+              <span>Articles</span>
+            </div>
+            <div className="flex items-center text-xs">
+              <div className="w-3 h-3 bg-accent-500 rounded mr-2"></div>
+              <span>Prepositions</span>
+            </div>
+            <div className="flex items-center text-xs">
+              <div className="w-3 h-3 bg-success-500 rounded mr-2"></div>
+              <span>Pronouns</span>
+            </div>
+            <div className="flex items-center text-xs">
+              <div className="w-3 h-3 bg-blue-500 rounded mr-2"></div>
+              <span>Parts of Speech</span>
+            </div>
+            <div className="flex items-center text-xs">
+              <div className="w-3 h-3 bg-indigo-500 rounded mr-2"></div>
+              <span>Figures of Speech</span>
+            </div>
+          </div>
+        </Card>
+      </motion.div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         {/* Recommended Lessons */}
