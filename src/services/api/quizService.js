@@ -12,7 +12,7 @@ class QuizService {
     return [...this.quizzes];
   }
 
-  async getQuizQuestions(quizId) {
+async getQuizQuestions(quizId) {
     await this.delay(400);
     const questions = this.questions.filter(q => q.quizId === parseInt(quizId));
     
@@ -20,7 +20,7 @@ class QuizService {
       // Generate random questions if none found for this quiz
       const allQuestions = [...this.questions];
       const shuffled = allQuestions.sort(() => 0.5 - Math.random());
-      return shuffled.slice(0, 8).map(q => ({ ...q }));
+      return shuffled.slice(0, 10).map(q => ({ ...q }));
     }
     
     return questions.map(q => ({ ...q }));

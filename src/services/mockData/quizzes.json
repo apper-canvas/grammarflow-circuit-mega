@@ -16,8 +16,8 @@
     "description": "Test your knowledge of present simple and continuous",
     "category": "tenses",
     "difficulty": 1,
-    "questionCount": 8,
-    "estimatedTime": 6,
+    "questionCount": 10,
+    "estimatedTime": 8,
     "isDaily": false,
     "adaptiveDifficulty": 1
   },
@@ -27,8 +27,8 @@
     "description": "Master the use of a, an, and the",
     "category": "articles",
     "difficulty": 1,
-    "questionCount": 6,
-    "estimatedTime": 4,
+    "questionCount": 10,
+    "estimatedTime": 7,
     "isDaily": false,
     "adaptiveDifficulty": 1
   },
@@ -49,8 +49,8 @@
     "description": "First, second, and third conditional practice",
     "category": "conditionals",
     "difficulty": 3,
-    "questionCount": 12,
-    "estimatedTime": 10,
+    "questionCount": 10,
+    "estimatedTime": 8,
     "isDaily": false,
     "adaptiveDifficulty": 3
   },
@@ -60,8 +60,8 @@
     "description": "Complex grammatical structures for advanced learners",
     "category": "mixed",
     "difficulty": 3,
-    "questionCount": 15,
-    "estimatedTime": 12,
+    "questionCount": 10,
+    "estimatedTime": 8,
     "isDaily": false,
     "adaptiveDifficulty": 3
   }
