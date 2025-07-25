@@ -25,9 +25,10 @@ export default {
           600: '#7c2d12',
           700: '#6d28d9',
         },
-        accent: {
+accent: {
           50: '#fffbeb',
           100: '#fef3c7',
+          200: '#fed7aa',
           500: '#f59e0b',
           600: '#d97706',
           700: '#b45309',
