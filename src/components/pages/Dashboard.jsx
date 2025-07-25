@@ -211,14 +211,27 @@ const startDate = new Date();
               const days = [];
               const current = new Date(startDate);
               
-              for (let i = 0; i < 42; i++) {
+for (let i = 0; i < 42; i++) {
                 const isCurrentMonth = current.getMonth() === selectedDate.getMonth();
                 const isToday = current.toDateString() === new Date().toDateString();
                 const dateStr = current.toISOString().split('T')[0];
-                const dayLessons = calendarLessons.filter(lesson => 
-                  lesson.scheduledDate === dateStr
-                );
-
+                
+                // Robust date matching to handle different formats
+                const dayLessons = calendarLessons.filter(lesson => {
+                  if (!lesson.scheduledDate) return false;
+                  
+                  // Normalize the lesson date to YYYY-MM-DD format
+                  let lessonDateStr;
+                  try {
+                    const lessonDate = new Date(lesson.scheduledDate);
+                    lessonDateStr = lessonDate.toISOString().split('T')[0];
+                  } catch (e) {
+                    // If date parsing fails, try direct string comparison
+                    lessonDateStr = lesson.scheduledDate.toString().split('T')[0];
+                  }
+                  
+                  return lessonDateStr === dateStr;
+                });
                 days.push(
                   <div
                     key={current.toISOString()}
