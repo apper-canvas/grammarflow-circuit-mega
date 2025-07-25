@@ -135,10 +135,11 @@ const startDate = new Date();
             <div className="p-6 bg-white/10 rounded-2xl backdrop-blur-sm">
               <ApperIcon name="Trophy" size={64} className="text-accent-300" />
             </div>
-          </div>
+</div>
         </div>
       </motion.div>
-{/* Stats Grid */}
+
+      {/* Stats Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {stats.map((stat, index) => (
           <motion.div
@@ -421,9 +422,8 @@ days.push(
                 </p>
               </div>
             )}
-          </Card>
-</div>
-      </div>
+</Card>
+        </div>
       </div>
 
       {/* Curriculum Event Modal */}
