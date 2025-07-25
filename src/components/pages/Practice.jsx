@@ -51,12 +51,16 @@ useEffect(() => {
     return quizzes.filter(quiz => !quiz.isDaily && quiz.category === selectedTopic);
   };
 
-  const getTopicDisplayName = (topic) => {
+const getTopicDisplayName = (topic) => {
     const topicNames = {
       tenses: "Tenses",
       articles: "Articles", 
       prepositions: "Prepositions",
+      pronouns: "Pronouns",
       conditionals: "Conditionals",
+      adjectives: "Adjectives",
+      "parts-of-speech": "Parts of Speech",
+      "figures-of-speech": "Figures of Speech",
       mixed: "Mixed Grammar"
     };
     return topicNames[topic] || topic.charAt(0).toUpperCase() + topic.slice(1);

@@ -64,5 +64,49 @@
     "estimatedTime": 8,
     "isDaily": false,
     "adaptiveDifficulty": 3
+},
+  {
+    "Id": 7,
+    "title": "Pronoun Mastery",
+    "description": "Test your knowledge of subject, object, and possessive pronouns",
+    "category": "pronouns",
+    "difficulty": 1,
+    "questionCount": 10,
+    "estimatedTime": 7,
+    "isDaily": false,
+    "adaptiveDifficulty": 1
+  },
+  {
+    "Id": 8,
+    "title": "Adjective Forms",
+    "description": "Practice comparative, superlative, and descriptive adjectives",
+    "category": "adjectives",
+    "difficulty": 2,
+    "questionCount": 10,
+    "estimatedTime": 8,
+    "isDaily": false,
+    "adaptiveDifficulty": 2
+  },
+  {
+    "Id": 9,
+    "title": "Parts of Speech Challenge",
+    "description": "Identify nouns, verbs, adjectives, adverbs, and other word types",
+    "category": "parts-of-speech",
+    "difficulty": 2,
+    "questionCount": 12,
+    "estimatedTime": 10,
+    "isDaily": false,
+    "adaptiveDifficulty": 2
+  },
+  {
+    "Id": 10,
+    "title": "Figures of Speech Quiz",
+    "description": "Master metaphors, similes, personification, and literary devices",
+    "category": "figures-of-speech",
+    "difficulty": 2,
+    "questionCount": 10,
+    "estimatedTime": 9,
+    "isDaily": false,
+    "adaptiveDifficulty": 2
   }
 ]
