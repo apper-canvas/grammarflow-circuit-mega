@@ -1,7 +1,7 @@
 import React from "react";
 import ApperIcon from "@/components/ApperIcon";
 import { motion } from "framer-motion";
-import { cn } from "@/lib/utils";
+import { cn } from "@/utils/cn";
 const StreakCounter = ({ streak, lastPractice }) => {
   const isActiveToday = lastPractice && 
     new Date(lastPractice).toDateString() === new Date().toDateString();
