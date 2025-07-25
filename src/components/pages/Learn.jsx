@@ -23,13 +23,16 @@ const Learn = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [selectedDifficulty, setSelectedDifficulty] = useState("all");
 
-  const categories = [
+const categories = [
     { value: "all", label: "All Categories" },
     { value: "tenses", label: "Tenses" },
     { value: "articles", label: "Articles" },
     { value: "prepositions", label: "Prepositions" },
     { value: "pronouns", label: "Pronouns" },
-    { value: "conditionals", label: "Conditionals" }
+    { value: "conditionals", label: "Conditionals" },
+    { value: "adjectives", label: "Adjectives" },
+    { value: "parts-of-speech", label: "Parts of Speech" },
+    { value: "figures-of-speech", label: "Figures of Speech" }
   ];
 
   const difficulties = [

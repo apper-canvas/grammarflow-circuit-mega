@@ -144,7 +144,7 @@
       ]
     },
     "prerequisites": []
-  },
+},
   {
     "Id": 8,
     "title": "Present Continuous Tense",
@@ -161,6 +161,293 @@
       "rules": [
         "am/is/are + verb + -ing",
         "Use for actions happening now"
+      ]
+    },
+    "prerequisites": []
+  },
+  {
+    "Id": 9,
+    "title": "Nouns: Types and Usage",
+    "description": "Master different types of nouns and their grammatical functions",
+    "category": "parts-of-speech",
+    "difficulty": 1,
+    "estimatedTime": 15,
+    "content": {
+      "explanation": "Nouns are words that name people, places, things, or ideas. They can be concrete or abstract.",
+      "examples": [
+        "Common nouns: dog, city, happiness",
+        "Proper nouns: London, Shakespeare, Christmas",
+        "Abstract nouns: love, freedom, courage"
+      ],
+      "rules": [
+        "Common nouns are not capitalized unless at sentence start",
+        "Proper nouns are always capitalized",
+        "Collective nouns can be singular or plural"
+      ]
+    },
+    "prerequisites": []
+  },
+  {
+    "Id": 10,
+    "title": "Verbs: Action and Linking",
+    "description": "Understand action verbs, linking verbs, and helping verbs",
+    "category": "parts-of-speech",
+    "difficulty": 1,
+    "estimatedTime": 12,
+    "content": {
+      "explanation": "Verbs express actions, states of being, or help other verbs complete their meaning.",
+      "examples": [
+        "Action verbs: run, think, create",
+        "Linking verbs: is, seem, become",
+        "Helping verbs: have, will, must"
+      ],
+      "rules": [
+        "Action verbs show what the subject does",
+        "Linking verbs connect subject to complement",
+        "Helping verbs assist main verbs"
+      ]
+    },
+    "prerequisites": []
+  },
+  {
+    "Id": 11,
+    "title": "Adverbs: Modifying and Describing",
+    "description": "Learn how adverbs modify verbs, adjectives, and other adverbs",
+    "category": "parts-of-speech",
+    "difficulty": 2,
+    "estimatedTime": 14,
+    "content": {
+      "explanation": "Adverbs modify verbs, adjectives, or other adverbs, often ending in -ly.",
+      "examples": [
+        "Modifying verbs: She sings beautifully",
+        "Modifying adjectives: Very tall building",
+        "Modifying adverbs: Quite slowly moving"
+      ],
+      "rules": [
+        "Many adverbs end in -ly",
+        "Adverbs of manner tell how",
+        "Adverbs of time tell when"
+      ]
+    },
+    "prerequisites": [7]
+  },
+  {
+    "Id": 12,
+    "title": "Interjections: Expressing Emotion",
+    "description": "Use interjections to express strong feelings and emotions",
+    "category": "parts-of-speech",
+    "difficulty": 1,
+    "estimatedTime": 8,
+    "content": {
+      "explanation": "Interjections are words or phrases that express strong emotion or sudden feeling.",
+      "examples": [
+        "Wow! That's amazing!",
+        "Ouch! That hurt!",
+        "Alas, we lost the game."
+      ],
+      "rules": [
+        "Strong interjections use exclamation marks",
+        "Mild interjections use commas",
+        "Can stand alone or within sentences"
+      ]
+    },
+    "prerequisites": []
+  },
+  {
+    "Id": 13,
+    "title": "Conjunctions: Connecting Words",
+    "description": "Master coordinating, subordinating, and correlative conjunctions",
+    "category": "parts-of-speech",
+    "difficulty": 2,
+    "estimatedTime": 16,
+    "content": {
+      "explanation": "Conjunctions connect words, phrases, or clauses in sentences.",
+      "examples": [
+        "Coordinating: and, but, or, so",
+        "Subordinating: because, although, since",
+        "Correlative: either...or, both...and"
+      ],
+      "rules": [
+        "FANBOYS: for, and, nor, but, or, yet, so",
+        "Subordinating conjunctions start dependent clauses",
+        "Correlative conjunctions work in pairs"
+      ]
+    },
+    "prerequisites": [1]
+  },
+  {
+    "Id": 14,
+    "title": "Metaphors: Implied Comparisons",
+    "description": "Create powerful imagery using metaphors in writing and speech",
+    "category": "figures-of-speech",
+    "difficulty": 2,
+    "estimatedTime": 18,
+    "content": {
+      "explanation": "Metaphors compare two unlike things without using 'like' or 'as', creating vivid imagery.",
+      "examples": [
+        "Life is a journey",
+        "Time is money",
+        "Her voice is music to my ears"
+      ],
+      "rules": [
+        "Direct comparison without 'like' or 'as'",
+        "Creates implied relationship between things",
+        "Often used for emotional or descriptive effect"
+      ]
+    },
+    "prerequisites": []
+  },
+  {
+    "Id": 15,
+    "title": "Similes: Direct Comparisons",
+    "description": "Use similes to make clear comparisons using 'like' or 'as'",
+    "category": "figures-of-speech",
+    "difficulty": 1,
+    "estimatedTime": 12,
+    "content": {
+      "explanation": "Similes compare two different things using 'like' or 'as' to create vivid descriptions.",
+      "examples": [
+        "As brave as a lion",
+        "Fights like a tiger",
+        "Smooth as silk"
+      ],
+      "rules": [
+        "Always uses 'like' or 'as'",
+        "Compares two unlike things",
+        "Makes writing more descriptive"
+      ]
+    },
+    "prerequisites": []
+  },
+  {
+    "Id": 16,
+    "title": "Personification: Giving Life to Objects",
+    "description": "Bring inanimate objects to life through personification",
+    "category": "figures-of-speech",
+    "difficulty": 2,
+    "estimatedTime": 14,
+    "content": {
+      "explanation": "Personification gives human characteristics to non-human things.",
+      "examples": [
+        "The wind whispered through the trees",
+        "The sun smiled down on us",
+        "Time marches on"
+      ],
+      "rules": [
+        "Gives human traits to non-human things",
+        "Makes writing more engaging",
+        "Often used in poetry and creative writing"
+      ]
+    },
+    "prerequisites": []
+  },
+  {
+    "Id": 17,
+    "title": "Hyperbole: Deliberate Exaggeration",
+    "description": "Use hyperbole for emphasis and dramatic effect",
+    "category": "figures-of-speech",
+    "difficulty": 2,
+    "estimatedTime": 10,
+    "content": {
+      "explanation": "Hyperbole uses deliberate and obvious exaggeration for emphasis or effect.",
+      "examples": [
+        "I've told you a million times",
+        "This bag weighs a ton",
+        "I'm so hungry I could eat a horse"
+      ],
+      "rules": [
+        "Extreme exaggeration not meant literally",
+        "Used for emphasis or humor",
+        "Common in everyday speech"
+      ]
+    },
+    "prerequisites": []
+  },
+  {
+    "Id": 18,
+    "title": "Alliteration: Repetitive Sounds",
+    "description": "Create rhythm and emphasis through alliteration",
+    "category": "figures-of-speech",
+    "difficulty": 1,
+    "estimatedTime": 10,
+    "content": {
+      "explanation": "Alliteration repeats the same consonant sound at the beginning of nearby words.",
+      "examples": [
+        "Peter Piper picked a peck",
+        "Sally sells seashells",
+        "Big brown bear"
+      ],
+      "rules": [
+        "Repeats initial consonant sounds",
+        "Creates rhythm and memorability",
+        "Common in poetry and advertising"
+      ]
+    },
+    "prerequisites": []
+  },
+  {
+    "Id": 19,
+    "title": "Onomatopoeia: Sound Words",
+    "description": "Use words that imitate the sounds they represent",
+    "category": "figures-of-speech",
+    "difficulty": 1,
+    "estimatedTime": 8,
+    "content": {
+      "explanation": "Onomatopoeia uses words that phonetically imitate the sound they describe.",
+      "examples": [
+        "The bee buzzed loudly",
+        "The clock tick-tocked",
+        "The door slammed with a bang"
+      ],
+      "rules": [
+        "Words sound like what they describe",
+        "Adds sensory appeal to writing",
+        "Common in comic books and children's literature"
+      ]
+    },
+    "prerequisites": []
+  },
+  {
+    "Id": 20,
+    "title": "Irony: Contrast and Contradiction",
+    "description": "Understand situational, verbal, and dramatic irony",
+    "category": "figures-of-speech",
+    "difficulty": 3,
+    "estimatedTime": 20,
+    "content": {
+      "explanation": "Irony involves contrast between expectation and reality, or between literal and intended meaning.",
+      "examples": [
+        "Verbal irony: 'Great weather!' during a storm",
+        "Situational irony: Fire station burns down",
+        "Dramatic irony: Reader knows what character doesn't"
+      ],
+      "rules": [
+        "Verbal irony says opposite of what's meant",
+        "Situational irony involves unexpected outcomes",
+        "Dramatic irony creates tension in stories"
+      ]
+    },
+    "prerequisites": []
+  },
+  {
+    "Id": 21,
+    "title": "Oxymoron: Contradictory Terms",
+    "description": "Use contradictory words together for effect",
+    "category": "figures-of-speech",
+    "difficulty": 2,
+    "estimatedTime": 12,
+    "content": {
+      "explanation": "Oxymoron combines contradictory or opposing terms to create a paradoxical effect.",
+      "examples": [
+        "Deafening silence",
+        "Jumbo shrimp",
+        "Pretty ugly",
+        "Act naturally"
+      ],
+      "rules": [
+        "Combines opposite or contradictory words",
+        "Creates emphasis through contradiction",
+        "Often used for humor or to highlight complexity"
       ]
     },
     "prerequisites": []
