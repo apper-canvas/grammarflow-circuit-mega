@@ -73,6 +73,41 @@ class LessonService {
     this.lessons.splice(index, 1);
     return { success: true };
   }
+async markAsCompleted(id) {
+    await this.delay(300);
+    const lesson = this.lessons.find(l => l.Id === parseInt(id));
+    if (!lesson) {
+      throw new Error(`Lesson with Id ${id} not found`);
+    }
+    
+    // Store completion in localStorage for persistence
+    const completedLessons = this.getCompletedLessons();
+    if (!completedLessons.includes(parseInt(id))) {
+      completedLessons.push(parseInt(id));
+      localStorage.setItem('completedLessons', JSON.stringify(completedLessons));
+    }
+    
+    return { success: true, lessonId: parseInt(id) };
+  }
+
+  getCompletedLessons() {
+    try {
+      const completed = localStorage.getItem('completedLessons');
+      return completed ? JSON.parse(completed) : [];
+    } catch (error) {
+      return [];
+    }
+  }
+
+  async getLessonProgress(id) {
+    await this.delay(200);
+    const completedLessons = this.getCompletedLessons();
+    return {
+      lessonId: parseInt(id),
+      isCompleted: completedLessons.includes(parseInt(id)),
+      completedAt: completedLessons.includes(parseInt(id)) ? new Date().toISOString() : null
+    };
+  }
 
   delay(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
