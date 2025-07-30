@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import { toast } from "react-hot-toast";
+import { toast } from "react-toastify";
 import userService from "@/services/api/userService";
 import lessonService from "@/services/api/lessonService";
 import ApperIcon from "@/components/ApperIcon";
