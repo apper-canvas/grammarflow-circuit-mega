@@ -87,7 +87,11 @@ const Courses = () => {
     const matchesDifficulty = selectedDifficulty === 'all' || lesson.difficulty.toString() === selectedDifficulty;
     
     return matchesSearch && matchesCategory && matchesDifficulty;
-  });
+});
+
+  const isLessonCompleted = (lessonId) => {
+    return completedLessons.includes(lessonId);
+  };
 
   const coursesByCategory = categories.reduce((acc, category) => {
     if (category.value === 'all') return acc;
@@ -103,10 +107,6 @@ const Courses = () => {
     }
     return acc;
   }, {});
-
-  const isLessonCompleted = (lessonId) => {
-    return completedLessons.includes(lessonId);
-  };
 
   const handleStartLesson = async (lesson) => {
     try {
