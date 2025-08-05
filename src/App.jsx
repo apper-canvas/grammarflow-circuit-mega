@@ -4,6 +4,7 @@ import { ToastContainer } from "react-toastify";
 import Layout from "@/components/organisms/Layout";
 import Dashboard from "@/components/pages/Dashboard";
 import Learn from "@/components/pages/Learn";
+import Courses from "@/components/pages/Courses";
 import Practice from "@/components/pages/Practice";
 import Progress from "@/components/pages/Progress";
 import Profile from "@/components/pages/Profile";
@@ -16,10 +17,11 @@ function App() {
 <Route path="/" element={<Layout />}>
             <Route index element={<Dashboard />} />
             <Route path="learn" element={<Learn />} />
+            <Route path="courses" element={<Courses />} />
             <Route path="practice" element={<Practice />} />
             <Route path="progress" element={<Progress />} />
             <Route path="profile" element={<Profile />} />
-            <Route 
+            <Route
               path="placement-test" 
               element={
                 <PlacementTest 

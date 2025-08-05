@@ -11,6 +11,7 @@ const Sidebar = ({ isOpen, onClose }) => {
 const navigationItems = [
     { to: "/", icon: "Home", label: "Dashboard" },
     { to: "/learn", icon: "BookOpen", label: "Learn" },
+    { to: "/courses", icon: "BookOpenCheck", label: "Courses" },
     { to: "/practice", icon: "Brain", label: "Practice" },
     { to: "/progress", icon: "TrendingUp", label: "Progress" },
     { to: "/profile", icon: "User", label: "Profile" },
